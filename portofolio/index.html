@@ -10,6 +10,9 @@
     <!-- Bootstrap Icon -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
 
+    <!-- AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
     <!-- My CSS -->
     <link rel="stylesheet" href="style.css" />
   </head>
@@ -45,7 +48,7 @@
     <section class="jumbotron text-center">
       <img src="../img/foto-portfolio.jpg" alt="Muh. Syahril A" width="200" class="rounded-circle img-thumbnail" />
       <h1 class="display-4">Muh. Syahril A</h1>
-      <p class="lead">Data Entry | Software Engineer</p>
+      <p class="lead"></p>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path
           fill="#fff"
@@ -65,10 +68,10 @@
           </div>
         </div>
         <div class="row justify-content-center fs-5 text-center">
-          <div class="col-md-4">
+          <div class="col-md-4" data-aos="fade-right" data-aos-duration="1000">
             <p>Saya adalah orang yang Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt saepe iure praesentium dicta commodi magnam soluta totam rerum. Ab, ullam?</p>
           </div>
-          <div class="col-md-4">
+          <div class="col-md-4" data-aos="fade-left" data-aos-duration="1000">
             <p>Saya memiliki Lorem ipsum dolor sit amet consectetur adipisicing elit. Error iure corrupti voluptas temporibus unde voluptatibus. Architecto quasi rem libero distinctio ullam adipisci deleniti excepturi fugiat?</p>
           </div>
         </div>
@@ -93,7 +96,7 @@
         </div>
         <div class="row">
           <div class="col-md-4 mb-3">
-            <div class="card">
+            <div class="card" data-aos="flip-left" data-aos-duration="500">
               <img src="../img/experiences-1.jpg" class="card-img-top" alt="Magang PA Sungguminasa" />
               <div class="card-body">
                 <p class="card-text"><strong>Magang di Pengadilan Agama Sungguminasa</strong><br /><i>Juli - Agustus 2023</i><br />Menginput file arsip berkas perkara ke Sistem Informasi Penelusuran Perkara (SIPP)</p>
@@ -101,7 +104,7 @@
             </div>
           </div>
           <div class="col-md-4 mb-3">
-            <div class="card">
+            <div class="card" data-aos="flip-left" data-aos-duration="500" data-aos-delay="100">
               <img src="../img/experiences-2.jpg" class="card-img-top" alt="MSHC Multi Brand Store" />
               <div class="card-body">
                 <p class="card-text">
@@ -111,7 +114,7 @@
             </div>
           </div>
           <div class="col-md-4 mb-3">
-            <div class="card">
+            <div class="card" data-aos="flip-left" data-aos-duration="500" data-aos-delay="200">
               <img src="../img/experiences-3.png" class="card-img-top" alt="PANTARLIH" />
               <div class="card-body">
                 <p class="card-text">
@@ -186,6 +189,23 @@
     <!-- Akhir Footer -->
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        once: true,
+      });
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/TextPlugin.min.js"></script>
+    <script>
+      gsap.registerPlugin(TextPlugin);
+      gsap.to(".lead", { duration: 2, delay: 1.5, text: "Data Entry | Software Engineer" });
+      gsap.from(".jumbotron img", { duration: 1, rotateY: 360, opacity: 0 });
+      gsap.from(".navbar", { duration: 1.2, y: "-100%", opacity: 0 });
+      gsap.from(".display-4", { duration: 1, x: -50, opacity: 0, delay: 0.5, ease: "back" });
+    </script>
 
     <script>
       const scriptURL = "https://script.google.com/macros/s/AKfycbxkVo63tFFOlLC5YV332o4i5JfinaW5ZugHe5mfxjrHDNbIe6718wAvmxdxCAm5EzFbOQ/exec";
